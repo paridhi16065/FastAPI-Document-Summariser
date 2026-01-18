@@ -1,5 +1,5 @@
 # FastAPI-Document-Summariser
-Document processing and summarising API
+Document processing and summarising API  
 A FastAPI-based service that ingests PDF documents, extracts text, chunks long inputs, and applies transformer-based summarisation with explicit validation and error handling.
 
 ## Overview
@@ -15,6 +15,7 @@ This service:
 ## Architecture
 
 Client → FastAPI → PDF Text Extraction → Chunking → Summarisation Model → JSON Response
+
 The model is loaded once at startup to avoid load at request time
 
 ## Design Decisions
@@ -42,5 +43,5 @@ The API documentation is available at http://127.0.0.1:8000/docs
 
 The service can also be run in a Docker container for a reproducible environment.
 
-docker build -t doc-summarizer .
+docker build -t doc-summarizer .  
 docker run -p 8000:8000 doc-summarizer
